@@ -32,7 +32,7 @@ body {
 
 .span-two {
   grid-column: span 2;
-  color: #ffffff;
+  color: #000000;
   background-color: rgb(184, 0, 184);
 }
 
