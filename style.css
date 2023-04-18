@@ -44,7 +44,7 @@ h1 {
 
 .display {
   border-radius: 0.5em;
-  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  box-shadow: 3px 3px 7px #ffffff73, -2px -2px 5px rgba(94, 104, 121, 0.288);
   background-color: rgba(255, 255, 255, 0);
   margin-bottom: 1em;
   padding: 1rem;
@@ -96,17 +96,17 @@ h1 {
   grid-column: span 1;
 }
 .is-operator {
-  color: #ed11d7;
+  color: #ed11d764;
   font-size: 20px;
   font-weight: bold;
 }
 
 .is-zero {
-  background-color: rgba(1, 103, 255, 0.645) !important;
+  background-color: #0368ff83 !important;
 }
 
 .is-clear {
-  background-color: rgb(234, 2, 255) !important;
+  background-color: #ed11d764 !important;
 }
 
 @media screen and (min-width: 601px) and (max-width: 960px) {
