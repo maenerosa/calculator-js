@@ -1,59 +1,92 @@
 * {
-  box-sizing: border-box;
-  font-family: Gotham Rounded, sans-serif;
-  font-weight: normal;
-}
-
-body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0));
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.calculator-grid {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-}
-
-.calculator-grid > button {
-  cursor: pointer;
-  font-size: 2rem;
-  border: 1px, solid #ffffff;
-  outline: none;
-}
-
-.calculator-grid > button:hover {
-  background-color: #ffffff;
-}
-
-.span-two {
-  grid-column: span 2;
-  color: #000000;
-  background-color: rgb(184, 0, 184);
-}
-
-.output {
-  grid-column: 1 / -1;
-  background-color: rgb(255, 255, 255);
+#root {
+  height: 100dvh;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  padding: 1em;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+.main {
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .main {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .main {
+    max-width: 400px;
+  }
+}
+
+.display {
+  border: 1px solid gray;
+  margin-bottom: 1em;
   padding: 10px;
-  word-wrap: break-word;
-  word-break: break-all;
+  display: flex;
+  flex-direction: column;
 }
 
-.output .previous-operand {
-  color: rgba(0, 0, 0, 0.75);
-  font-size: 1.5rem;
+.display input {
+  text-align: right;
+  border: none;
 }
 
-.output .current-operand {
-  color: rgb(0, 0, 0);
-  font-size: 2.5rem;
+.small-display {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.large-display {
+  font-size: 40px;
+}
+
+.inputs {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.inputs button {
+  font-size: 28px;
+  padding: 20px;
+  color: white;
+  background-color: gray;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.inputs button:hover {
+  cursor: pointer;
+}
+
+.is-zero,
+.is-clear {
+  grid-column: span 3;
+}
+
+.is-zero {
+  background-color: darkseagreen !important;
+}
+
+.is-clear {
+  background-color: cornflowerblue !important;
 }
