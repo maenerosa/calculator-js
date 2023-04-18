@@ -4,6 +4,7 @@ const clearButton = document.querySelector(".is-clear");
 const largeDisplay = document.querySelector(".large-display");
 const smallDisplay = document.querySelector(".small-display");
 const btnEquals = document.querySelector(".is-equals");
+const deleteButton = document.querySelector(".is-delete");
 
 let currentInput = "";
 let previousInput = "";
@@ -13,6 +14,9 @@ function clear() {
   currentInput = "";
   previousInput = "";
   operator = undefined;
+}
+function del() {
+  currentInput = currentInput.toString().slice(0, -1);
 }
 
 function updateDisplay() {
@@ -47,6 +51,7 @@ function compute() {
   const previousNumber = parseInt(previousInput);
   const currentNumber = parseInt(currentInput);
 
+  if (isNaN(previousNumber) || isNaN(currentNumber)) return;
   switch (operator) {
     case "+":
       total = previousNumber + currentNumber;
@@ -54,7 +59,7 @@ function compute() {
     case "−":
       total = previousNumber - currentNumber;
       break;
-    case "×":
+    case "*":
       total = previousNumber * currentNumber;
       break;
     case "÷":
@@ -92,5 +97,10 @@ operatorButtons.forEach((button) => {
 
 btnEquals.addEventListener("click", () => {
   compute();
+  updateDisplay();
+});
+
+deleteButton.addEventListener("click", () => {
+  del();
   updateDisplay();
 });

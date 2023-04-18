@@ -39,12 +39,12 @@ h1 {
   padding: 1em;
   width: 100%;
   border-radius: 0.5em;
-  box-shadow: -5px -5px 10px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  box-shadow: -5px -5px 10px #ffffff73, 5px 5px 10px rgba(94, 104, 121, 0.288);
 }
 
 .display {
   border-radius: 0.5em;
-  box-shadow: 3px 3px 7px #ffffff73, -2px -2px 5px rgba(94, 104, 121, 0.288);
+  box-shadow: 3px 3px 7px #ffffff73, -3px -3px 7px rgba(94, 104, 121, 0.288);
   background-color: rgba(255, 255, 255, 0);
   margin-bottom: 1em;
   padding: 1rem;
@@ -82,7 +82,7 @@ h1 {
   height: 60px;
   border-radius: 50%;
   border: none;
-  box-shadow: 2px 2px 10px #ffffff73, -2px -2px 5px rgba(94, 104, 121, 0.288);
+  box-shadow: -5px -5px 12px #ffffff73, 5px 5px 12px rgba(94, 104, 121, 0.288);
   background-color: rgba(255, 255, 255, 0);
 }
 
