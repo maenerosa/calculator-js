@@ -1,12 +1,18 @@
+@import url(‘https://fonts.googleapis.com/css?family=Montserrat&display=swap’);
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,600&family=Montserrat:wght@700&family=Playfair+Display&family=Quicksand:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #dde1e7;
+  font-family: ‘Montserrat’, sans-serif;
 }
 
 #root {
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +27,8 @@ body {
 
 h1 {
   margin-bottom: 1em;
+  font-weight: 600;
+  font-family: "Tilt Prism";
 }
 
 .main {
@@ -28,6 +36,73 @@ h1 {
   width: 100%;
   border-radius: 0.5em;
   box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+.display {
+  border-radius: 0.5em;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 1em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.display input {
+  text-align: right;
+  border: none;
+}
+
+.small-display {
+  background-color: transparent;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.large-display {
+  background-color: transparent;
+  font-size: 40px;
+}
+
+.inputs {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.inputs button {
+  cursor: grab;
+  text-align: center;
+  width: 60px;
+  font-size: 20px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.inputs button:hover {
+  cursor: pointer;
+  color: #3498db;
+}
+
+.is-zero,
+.is-clear {
+  grid-column: span 1;
+}
+.is-operator {
+  color: #ed11d7;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.is-zero {
+  background-color: rgba(1, 103, 255, 0.645) !important;
+}
+
+.is-clear {
+  background-color: rgb(234, 2, 255) !important;
 }
 
 @media screen and (min-width: 601px) and (max-width: 960px) {
@@ -40,60 +115,4 @@ h1 {
   .main {
     max-width: 400px;
   }
-}
-
-.display {
-  border-radius: 0.5em;
-  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
-
-  margin-bottom: 1em;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.display input {
-  text-align: right;
-  border: none;
-}
-
-.small-display {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.large-display {
-  font-size: 40px;
-}
-
-.inputs {
-  display: grid;
-  gap: 1em;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.inputs button {
-  font-size: 28px;
-  padding: 20px;
-  color: white;
-  background-color: gray;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-
-.inputs button:hover {
-  cursor: pointer;
-}
-
-.is-zero,
-.is-clear {
-  grid-column: span 3;
-}
-
-.is-zero {
-  background-color: darkseagreen !important;
-}
-
-.is-clear {
-  background-color: cornflowerblue !important;
 }
