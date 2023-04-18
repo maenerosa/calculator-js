@@ -78,7 +78,7 @@ h1 {
   cursor: grab;
   text-align: center;
   width: 60px;
-  font-size: 20px;
+  font-size: 25px;
   height: 60px;
   border-radius: 50%;
   border: none;
@@ -88,24 +88,29 @@ h1 {
 
 .inputs button:hover {
   cursor: pointer;
-  color: #3498db;
+  color: #8a8a8a;
 }
 
 .is-zero,
 .is-clear {
   grid-column: span 1;
 }
-.is-operator {
+.is-operator,
+.is-delete,
+.is-percent {
   color: #ed11d764;
   font-size: 20px;
   font-weight: bold;
 }
 
 .is-zero {
+  color: #fff;
   background-color: #0368ff83 !important;
 }
 
-.is-clear {
+.is-clear,
+.is-equals {
+  color: #fff;
   background-color: #ed11d764 !important;
 }
 
