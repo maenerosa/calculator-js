@@ -14,15 +14,20 @@
   padding: 1em;
 }
 
+body {
+  background: #dde1e7;
+  font-family: ‘Montserrat’, sans-serif;
+}
+
 h1 {
   margin-bottom: 1em;
 }
 
 .main {
   padding: 1em;
-  border: 1px solid black;
-  border-radius: 5px;
   width: 100%;
+  border-radius: 0.5em;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
 @media screen and (min-width: 601px) and (max-width: 960px) {
@@ -38,7 +43,9 @@ h1 {
 }
 
 .display {
-  border: 1px solid gray;
+  border-radius: 0.5em;
+  box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+
   margin-bottom: 1em;
   padding: 10px;
   display: flex;
@@ -76,7 +83,6 @@ h1 {
 
 .inputs button:hover {
   cursor: pointer;
-  background: url("./images/button.jpg") no-repeat scroll 0 0 transparent;
 }
 
 .is-zero,
