@@ -47,8 +47,8 @@ function appendNumber(number) {
 }
 function compute() {
   let total = 0;
-  const previousNumber = parseInt(previousInput);
-  const currentNumber = parseInt(currentInput);
+  const previousNumber = parseFloat(previousInput);
+  const currentNumber = parseFloat(currentInput);
 
   if (isNaN(previousNumber) || isNaN(currentNumber)) return;
   switch (operator) {
