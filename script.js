@@ -41,11 +41,10 @@ function chooseOperator(chosenOperator) {
   previousInput = currentInput;
   currentInput = "";
 }
-
 function appendNumber(number) {
-  currentInput += number;
+  if (number === "." && currentInput.includes(".")) return;
+  currentInput = currentInput.toString() + number.toString();
 }
-
 function compute() {
   let total = 0;
   const previousNumber = parseInt(previousInput);
