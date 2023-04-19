@@ -5,6 +5,7 @@ const largeDisplay = document.querySelector(".large-display");
 const smallDisplay = document.querySelector(".small-display");
 const btnEquals = document.querySelector(".is-equals");
 const deleteButton = document.querySelector(".is-delete");
+const percentButton = document.querySelector(".is-percent");
 
 let currentInput = "";
 let previousInput = "";
@@ -50,12 +51,26 @@ function compute() {
   const previousNumber = parseFloat(previousInput);
   const currentNumber = parseFloat(currentInput);
 
+  // const calculator = (() => {
+  //   const add = (a, b) => a + b;
+  //   const sub = (a, b) => a - b;
+  //   const mul = (a, b) => a * b;
+  //   const div = (a, b) => a / b;
+
+  //   return {
+  //     add,
+  //     sub,
+  //     mul,
+  //     div,
+  //   };
+  // })();
+
   if (isNaN(previousNumber) || isNaN(currentNumber)) return;
   switch (operator) {
     case "+":
       total = previousNumber + currentNumber;
       break;
-    case "-":
+    case "−":
       total = previousNumber - currentNumber;
       break;
     case "×":
@@ -64,6 +79,7 @@ function compute() {
     case "÷":
       total = previousNumber / currentNumber;
       break;
+
     default:
       return "";
   }
@@ -101,5 +117,10 @@ btnEquals.addEventListener("click", () => {
 
 deleteButton.addEventListener("click", () => {
   del();
+  updateDisplay();
+});
+
+percentButton.addEventListener("click", () => {
+  compute();
   updateDisplay();
 });
