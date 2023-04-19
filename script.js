@@ -56,10 +56,10 @@ function compute() {
     case "+":
       total = previousNumber + currentNumber;
       break;
-    case "−":
+    case "-":
       total = previousNumber - currentNumber;
       break;
-    case "*":
+    case "×":
       total = previousNumber * currentNumber;
       break;
     case "÷":
