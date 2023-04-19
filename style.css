@@ -119,12 +119,12 @@ h1 {
 
 @media screen and (min-width: 601px) and (max-width: 960px) {
   .main {
-    width: 60%;
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 961px) {
   .main {
-    max-width: 600px;
+    max-width: 400px;
   }
 }
